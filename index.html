@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Simon Says</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+  </head>
+
+  <body>
+    <div class="mainControl">
+      <h1>Simon Says</h1>
+        <p id=count>Count:00</p>
+      <div class=row>
+        <div class=row>
+          <div class=controlColumn>
+            <h2>On/off</h2>
+          </div>
+          <div class=controlColumn>
+            <h2>Start</h2>
+          </div>
+          <div class=controlColumn>
+            <h2>Strict mode</h2>
+          </div>
+        </div>
+        <div class=controlColumn>
+          <label class="switch">
+            <input type="checkbox" onclick=turnOn();>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class=controlColumn>
+          <button class=startButton onclick=startGame();></button>
+        </div>
+        <div class=controlColumn>
+          <label>
+            <input class=strictButton type="checkbox" onclick=useStrict();>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class=container>
+      <div class=row>
+        <div class=column>
+          <div id=topLeftButton class=topLeftButton onclick=green()>
+          </div>
+        </div>
+        <div class=column>
+          <div id=topRightButton class=topRightButton onclick=red()>
+          </div>
+        </div>
+      </div>
+      <div class=row>
+        <div class=column>
+          <div id=bottomLeftButton class=bottomLeftButton onclick=yellow();>
+          </div>
+        </div>
+        <div class="column">
+          <div id=bottomRightButton class=bottomRightButton onclick=blue();>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="game.js"></script>
+</html>
